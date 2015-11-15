@@ -1,9 +1,9 @@
-<div class="sign_image_2"><%= image_tag @sign.image_2.url %></div>
+<div class="sign_image_2"><%= image_tag(@sign.image_1.url(:medium))%></div>
 <p> <%= @sign.birth_range %></p>
 <p> Horoscope for <%= Time.now.strftime("%m/%d/%Y") %></p>
 <p> <%= @sign.horoscope %></p>
 <p><%= link_to "Leave Feedback", new_feedback_path(@feedback) %></p>
 
 
-<%= link_to 'Edit', edit_song_path(@song) %> |
-<%= link_to 'Back', songs_path %>
+<%= link_to 'Edit', edit_sign_path(@sign) %> |
+<%= link_to 'Back', signs_path %>

@@ -1,0 +1,64 @@
+ 
+<%= form_for @feedback do |f| %>
+	<% if @feedback.errors.any? %>
+		<div class="errors">
+			<%= @feedback.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>	
+		</div>
+		<% end %>
+	<% end %>
+<div class="view">
+	<h3>Leave Feedback</h3>
+<div class="form-group">
+	<p>Was this horoscope helpful to you?</p>
+	<p><%= radio_button_tag(:helpful, "helpful") %> 
+	<%= f.label "helpful"%>
+	<%= radio_button_tag(:helpful, "not helpful") %>
+	<%= f.label "not helpful" %>
+	<%= radio_button_tag(:helpful, "neither helpful nor not helpful") %>
+	<%= f.label "neither helpful nor not helpful" %></p>
+</div>
+
+<div class="form-group">
+	<p>Was this horoscope accuarate for you?</p>
+	<p><%= radio_button_tag(:accurate, 1) %>
+	<%= f.label "not accurate"%> 
+	<%= radio_button_tag(:accurate, 2) %>
+	<%= f.label "minimally accurate"%> 
+	<%= radio_button_tag(:accurate, 3) %>
+	<%= f.label "moderately accurate"%> 
+	<%= radio_button_tag(:accurate, 4) %>
+	<%= f.label "mostly accurate"%> 
+	<%= radio_button_tag(:accurate, 5) %>
+	<%= f.label "extremely accurate"%> 
+	 </p>
+</div>
+
+<div class="form-group">
+	<p>What areas are you most interested in seeing your horoscope?</p>
+	<p><%= check_box_tag(:interested) %>
+	<%= label_tag(:interested, "Career")%>
+	<%= check_box_tag(:interested) %>
+	<%= label_tag(:interested, "Romantic")%>
+	<%= check_box_tag(:interested) %>
+	<%= label_tag(:interested, "Spiritual")%>
+	<%= check_box_tag(:interested) %>
+	<%= label_tag(:interested, "Social")%>
+	<%= check_box_tag(:interested) %>
+	<%= label_tag(:interested, "Financial")%>
+	<%= check_box_tag(:interested) %>
+	<%= label_tag(:interested, "Health")%>
+	</p>
+</div>
+
+<div class="form-group">
+<%= f.label "comments" %>
+<p><%= f.text_area :comments, placeholder: "enter comment" %></p>
+</div>
+
+<div class-"form-group">
+<%= f.submit "leave feedback" %>
+
+</div>
+</div>
+<% end %>

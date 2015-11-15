@@ -6,8 +6,24 @@ class SignsController < ApplicationController
     @signs= Sign.all
   end
 
+  def about
+  end
+
+  def contact
+  end
 
   def show
+      begin
+      @sign=Sign.find_by_slug(params[:id])
+    
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json {render json @sign}
+      end
+
+    rescue
+      redirect_to root_path, notice: "Unavailable"
+    end
   end
 
 
@@ -23,7 +39,7 @@ class SignsController < ApplicationController
     @sign = Sign.new(sign_params)
     if @sign.save
         #flash[:notice] = "New shirt created"
-        redirect_to signs_path(@sign), notice: "New sign created."
+        redirect_to sign_path(@sign), notice: "New sign created."
     else
       render :new
     end

@@ -1,0 +1,33 @@
+<header role="banner">
+  <img id="logo-main" src="<%=asset_path('logo.png') %>" width="200" alt="Astro-Logical">
+<!-- <nav id="navbar-primary" class="navbar navbar-default" role="navigation"> -->
+  <div class="container-fluid">
+
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+  
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-primary-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-primary-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"> 
+        <% if user_signed_in? %>
+        <li><%= link_to 'sign out', destroy_user_session_path, method: :delete %>  </li>
+        <% else %>
+        <li><%= link_to 'Sign Up', new_user_registration_path %> </li>
+        <li><%= link_to 'Log In', new_user_session_path %></li>
+        <% end %> </li>
+        <li><%= link_to "Home", root_path %></li>
+       <li> <%= link_to "About", about_path %></li>
+       <li> <%= link_to "Today's Data", todaysdata_path %></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+
+  </div><!-- /.container-fluid -->
+</nav>
+</header><!-- header role="banner" -->
