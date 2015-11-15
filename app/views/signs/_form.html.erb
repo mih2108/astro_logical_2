@@ -1,0 +1,27 @@
+<%= form_for(@sign) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :birth_range %><br>
+    <%= f.text_field :birth_range %>
+  </div>
+  <div class="field">
+    <%= f.file_field :horoscope %>
+  </div>
+  <div class="field">
+    <%= f.label :slug %><br>
+    <%= f.number_field :slug%>
+  </div>
+  <div class="field">
+    <%= f.file_field :image_1 %>
+  </div>
+   <div class="field">
+    <%= f.file_field :image_2 %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

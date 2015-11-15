@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  helpful: MyString
+  accurate: 1
+  interested: MyString
+  comments: MyText
+
+two:
+  helpful: MyString
+  accurate: 1
+  interested: MyString
+  comments: MyText
