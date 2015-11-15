@@ -21,7 +21,12 @@ class SignsController < ApplicationController
 
   def create
     @sign = Sign.new(sign_params)
-
+    if @shirt.save
+        #flash[:notice] = "New shirt created"
+        redirect_to shirt_path(@shirt), notice: "New sign created."
+    else
+      render :new
+    end
   end
 
 
