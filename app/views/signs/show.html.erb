@@ -1,7 +1,7 @@
-<div class="sign_image_2"><%= image_tag @sign.image_2 %></div>
+<div class="sign_image_2"><%= image_tag @sign.image_2.url %></div>
 <p> <%= @sign.birth_range %></p>
 <p> Horoscope for <%= Time.now.strftime("%m/%d/%Y") %></p>
-<p> <%= IO.binread(@sign.horoscope) %></p>
+<p> <%= @sign.horoscope %></p>
 <p><%= link_to "Leave Feedback", new_feedback_path(@feedback) %></p>
 
 

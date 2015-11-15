@@ -21,9 +21,9 @@ class SignsController < ApplicationController
 
   def create
     @sign = Sign.new(sign_params)
-    if @shirt.save
+    if @sign.save
         #flash[:notice] = "New shirt created"
-        redirect_to shirt_path(@shirt), notice: "New sign created."
+        redirect_to signs_path(@sign), notice: "New sign created."
     else
       render :new
     end
@@ -47,6 +47,6 @@ class SignsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sign_params
-      params.require(:sign).permit(:name, :image_1, :image_2, :birth_range, :cover, :horoscope, :slug)
+      params.require(:sign).permit(:name, :image_1, :birth_range, :horoscope, :slug)
     end
 end
