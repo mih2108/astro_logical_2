@@ -20,16 +20,7 @@ class SignsController < ApplicationController
 
 
   def create
-    @song = Sign.new(sign_params)
-
-    respond_to do |format|
-      if @sign.save
-        format.html { redirect_to @sign, notice: 'Sign was successfully created.' }
-        format.json { render :show, status: :created, location: @sign }
-      else
-        format.html { render :new }
-        format.json { render json: @sign.errors, status: :unprocessable_entity }
-      end
+    @sign = Sign.new(sign_params)
     end
   end
 
