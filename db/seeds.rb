@@ -1,7 +1,14 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+puts "###### Starting seed file... (stand back)"
+Sign.create name: "Aries", birth_range: "March 21 - April 19", image_1: "aries_1.png", image_2: "aries_2.png", horoscope: "aries.txt"
+Sign.create name: "Taurus", birth_range: "April 20 - May 20", image_1: "taurus_1.png", image_2: "taurus_2.png", horoscope: "taurus.txt"
+Sign.create name: "Gemini", birth_range: "May 21 - June 20", image_1: "gemini_1.png", image_2: "gemini_2.png", horoscope: "gemini.txt"
+Sign.create name: "Cancer", birth_range: "June 21 - July 22", image_1: "cancer_1.png", image_2: "cancer_2.png", horoscope: "cancer.txt"
+Sign.create name: "Leo", birth_range: "July 23 - August 22", image_1: "leo_1.png", image_2: "leo_2.png", horoscope: "leo.txt"
+Sign.create name: "Virgo", birth_range: "August 23 - September 22", image_1: "virgo_1.png", image_2: "virgo_2.png", horoscope: "virgo.txt"
+Sign.create name: "Libra", birth_range: "September 23 - October 22", image_1: "libra_1.png", image_2: "libra_2.png", horoscope: "libra.txt"
+Sign.create name: "Scorpio", birth_range: "October 23 - November 21", image_1: "scorpio_1.png", image_2: "scorpio_2.png", horoscope: "scorpio.txt"
+Sign.create name: "Sagittarius", birth_range: "November 22 - December 21", image_1: "sagittarius_1.png", image_2: "sagittarius_2.png", horoscope: "sagittarius.txt"
+Sign.create name: "Capricorn", birth_range: "December 22 - January 19", image_1: "capricorn_1.png", image_2: "capricorn_2.png", horoscope: "capricorn.text"
+Sign.create name: "Aquarius", birth_range: "January 20 - February 18", image_1: "aquarius_1.png", image_2: "aquarius_2.png", horoscope: "aquarius.txt"
+Sign.create name: "Pisces", birth_range: "February 19 - March 20", image_1: "pisces_1.png", image_2: "pisces_2.png", horoscope: "pisces.txt"
+puts "###### All done.. boo ya"
