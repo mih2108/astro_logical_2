@@ -21,29 +21,17 @@ class SignsController < ApplicationController
 
   def create
     @sign = Sign.new(sign_params)
-    end
+
   end
 
 
   def update
-    respond_to do |format|
-      if @sign.update(sign_params)
-        format.html { redirect_to @sign, notice: 'Sign was successfully updated.' }
-        format.json { render :show, status: :ok, location: @sign }
-      else
-        format.html { render :edit }
-        format.json { render json: @sign.errors, status: :unprocessable_entity }
-      end
-    end
+      @sign.update(sign_params)
   end
 
 
   def destroy
     @sign.destroy
-    respond_to do |format|
-      format.html { redirect_to signs_url, notice: 'Sign was successfully destroyed.' }
-      format.json { head :no_content }
-    end
   end
 
   private
