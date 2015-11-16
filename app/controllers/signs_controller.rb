@@ -13,17 +13,18 @@ class SignsController < ApplicationController
   end
 
   def show
-      begin
-      @sign=Sign.find_by_slug(params[:id])
+        @sign=Sign.find(params[:id])
+    #   begin
+    #   # @sign=Sign.find_by_slug(params[:id])
     
-      respond_to do |format|
-        format.html # show.html.erb
-        format.json {render json @sign}
-      end
+    #   # respond_to do |format|
+    #   #   format.html # show.html.erb
+    #   #   format.json {render json @sign}
+    #   # end
 
-    rescue
-      redirect_to root_path, notice: "Unavailable"
-    end
+    # rescue
+    #   redirect_to root_path, notice: "Unavailable"
+    # end
   end
 
 
