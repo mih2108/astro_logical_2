@@ -1,44 +1,46 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
 /* universal */
+
 body {
-  margin-top:  0;
-  margin-bottom: 0;
-  padding: 0;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
   margin-right: 100px;
   margin-left: 100px;
 }
 
 header[role="banner"] {
-    text-align: center;
-    vertical-align:middle;
-    float: none;
-    display: inline;
+  text-align: center;
+  vertical-align:middle;
+  float: none;
+  display: inline;
   #logo-main {
-    display: block;
-    margin: 20px auto;
+  display: block;
+  margin: 20px auto;
 
-    text-align: center;
-    vertical-align:middle;
+  text-align: center;
+  vertical-align:middle;
   }
 }
 
 .nav .navbar-nav { 
-    width: 100%;
-    float: none; 
-    display:inline;
+  width: 100%;
+  float: none; 
+  display:inline;
   }
 .nav .navbar-nav li {
-    display:inline-block;
+  display:inline-block;
   float:none;
   margin:0 20px;
   vertical-align:middle;
   }
   .nav .navbar-nav  a {
-        padding-left: 30px;
-        padding-right: 30px;
-        display: inline;
-        }
+    padding-left: 30px;
+    padding-right: 30px;
+    display: inline;
+    }
  
 
 .navbar-brand img {
@@ -50,13 +52,13 @@ header[role="banner"] {
 
 section {
   overflow: auto;
-    margin-right: 100px;
+  margin-right: 100px;
   margin-left: 100px;
 }
 
 textarea {
   resize: vertical;
-    margin-right: 100px;
+  margin-right: 100px;
   margin-left: 100px;
 }
 
@@ -70,19 +72,19 @@ textarea {
 
 .center h1 {
   margin-bottom: 10px;
-    margin-right: 100px;
+  margin-right: 100px;
   margin-left: 100px;
 }
 
 
 .sign_image {
 
-	padding: .0em;
-	margin: .30em;
-	float: left;
-	width: 200px;
-	height:200px;
-	border-radius: 0px 0px;
+  padding: .0em;
+  margin: .30em;
+  float: left;
+  width: 200px;
+  height:200px;
+  border-radius: 0px 0px;
 
 }
 
@@ -94,5 +96,5 @@ textarea {
   padding: 0;
 }
 .sign_image img {
-	width: 175px;
+  width: 175px;
 }
