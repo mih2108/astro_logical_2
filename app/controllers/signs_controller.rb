@@ -13,7 +13,7 @@ class SignsController < ApplicationController
   end
 
   def show
-        @sign=Sign.find(params[:id])
+       
     #   begin
     #   # @sign=Sign.find_by_slug(params[:id])
     
@@ -33,6 +33,7 @@ class SignsController < ApplicationController
   end
 
   def edit
+  
   end
 
 
@@ -54,12 +55,13 @@ class SignsController < ApplicationController
 
   def destroy
     @sign.destroy
+    redirect_to root_path
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sign
-      @sign = Sign.find_by_slug(params[:id])
+      @sign = Sign.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
