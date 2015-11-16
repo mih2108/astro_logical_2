@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'devise'
 gem "paperclip", "~> 4.3"
+gem 'aws-sdk'
 gem 'swe4r'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
